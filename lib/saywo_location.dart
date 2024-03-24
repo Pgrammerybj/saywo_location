@@ -31,7 +31,7 @@ class SayWoLocation {
   }
 
   /// 经纬度地理反编码
-  static Future<GeocodeEntity> geocodeCoordinate(double lat, double lon, {String pathHead = 'assets/'}) async {
+  static Future<GeocodeEntity> geocodeCoordinate(double lat, double lon, {String pathHead = 'packages/saywo_location/assets/'}) async {
     final res = await GeocodeUtil.geocodeGPS(lat, lon, pathHead: pathHead);
     return res;
   }

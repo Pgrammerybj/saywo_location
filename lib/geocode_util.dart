@@ -4,14 +4,14 @@ import 'common_util.dart';
 import 'geocode_entity.dart';
 import 'parse_result.dart';
 
-String _pathHead = 'assets/';
+String _pathHead = 'packages/saywo_location/assets/';
 
 class GeocodeUtil {
   ///
   GeocodeUtil._();
 
   /// 经纬度地理编码
-  static Future<GeocodeEntity> geocodeGPS(double lat, double lon, {String pathHead = 'assets/'}) async {
+  static Future<GeocodeEntity> geocodeGPS(double lat, double lon, {String pathHead = 'packages/saywo_location/assets/'}) async {
     print('耗时开始统计++++++++++++++++++++++++++++++++');
     final start = DateTime.now();
     _pathHead = pathHead;
