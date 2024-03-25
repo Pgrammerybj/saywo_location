@@ -2,12 +2,12 @@ import Flutter
 import UIKit
 import CoreLocation
 
-public class FlutterZLocationPlugin: NSObject, FlutterPlugin {
+public class SaywoLocationPlugin: NSObject, FlutterPlugin {
     var sysLocationManger: CLLocationManager?
     var locationResult: FlutterResult?
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "saywo_location", binaryMessenger: registrar.messenger())
-        let instance = FlutterZLocationPlugin()
+        let instance = SaywoLocationPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
 
@@ -40,7 +40,7 @@ public class FlutterZLocationPlugin: NSObject, FlutterPlugin {
     }
 }
 
-extension FlutterZLocationPlugin: CLLocationManagerDelegate {
+extension SaywoLocationPlugin: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let lo = locations.last {
             sysLocationManger?.stopUpdatingLocation()
